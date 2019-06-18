@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  varnish:
+    build: ./varnish
+    ports:
+      - 80:80
+    networks:
+      - frontend
+      - backend
+
+  frontend-a:
+    hostname: frontend-a
+    build: ./frontend-a
+    networks:
+      - frontend
+      - backend
+
+  backend-a:
+    hostname: backend-a
+    build: ./backend-a
+    networks:
+      - backend
+
+  frontend-b:
+    hostname: frontend-b
+    build: ./frontend-b
+    networks:
+      - frontend
+      - backend
+
+  backend-b:
+    hostname: backend-b
+    build: ./backend-b
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:

@@ -1,0 +1,7 @@
+rootProject.name = 'example-project'
+
+include 'frontend-a'
+include 'backend-a'
+include 'frontend-b'
+include 'backend-b'
+include 'varnish'

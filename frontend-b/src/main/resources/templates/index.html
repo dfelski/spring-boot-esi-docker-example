@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Frontend B</h1>
+<p th:text="'Hello, ' + ${frontendModel.name} + '!'" />
+
+<div><esi:include src="/a/component"/></div>
+<div><esi:include src="/b/component"/></div>
+
+</body>
+</html>

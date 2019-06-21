@@ -11,6 +11,6 @@ docker-compose up --build
 ```
 
 ## Test it
-Send a HTTP GET request to ``http://localhost:8080/a`` or ``http://localhost:8080/b`` to see the output of the applications.
+Send a HTTP GET request to ``http://localhost:8000/a`` or ``http://localhost:8000/b`` to see the output of the applications.
 
 The Varnish Cache caches the result for 10 seconds

@@ -5,34 +5,34 @@ services:
   varnish:
     build: ./varnish
     ports:
-      - 80:80
+      - 8000:80
     networks:
       - frontend
       - backend
 
-  frontend-a:
-    hostname: frontend-a
-    build: ./frontend-a
+  command-frontend:
+    hostname: command-frontend
+    build: ./command-frontend
     networks:
       - frontend
       - backend
 
-  backend-a:
-    hostname: backend-a
-    build: ./backend-a
+  command-backend:
+    hostname: command-backend
+    build: ./command-backend
     networks:
       - backend
 
-  frontend-b:
-    hostname: frontend-b
-    build: ./frontend-b
+  query-frontend:
+    hostname: query-frontend
+    build: ./query-frontend
     networks:
       - frontend
       - backend
 
-  backend-b:
-    hostname: backend-b
-    build: ./backend-b
+  query-backend:
+    hostname: query-backend
+    build: ./query-backend
     networks:
       - backend
 

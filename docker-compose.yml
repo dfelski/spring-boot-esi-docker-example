@@ -10,29 +10,29 @@ services:
       - frontend
       - backend
 
-  command-frontend:
-    hostname: command-frontend
-    build: ./command-frontend
+  frontend-a:
+    hostname: frontend-a
+    build: ./frontend-a
     networks:
       - frontend
       - backend
 
-  command-backend:
-    hostname: command-backend
-    build: ./command-backend
+  backend-a:
+    hostname: backend-a
+    build: ./backend-a
     networks:
       - backend
 
-  query-frontend:
-    hostname: query-frontend
-    build: ./query-frontend
+  frontend-b:
+    hostname: frontend-b
+    build: ./frontend-b
     networks:
       - frontend
       - backend
 
-  query-backend:
-    hostname: query-backend
-    build: ./query-backend
+  backend-b:
+    hostname: backend-b
+    build: ./backend-b
     networks:
       - backend
 
